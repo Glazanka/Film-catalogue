@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#film-details {
+    display: flex;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 50vw;
+    height: 60vh;
+    display: flex;
+}
+
+.film-details__left,
+.film-details__right {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.film-details__left {
+    flex: 1;
+    align-items: center;
+}
+
+.film-details__right {
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 2;
+}
+
+.film-details__left img {
+    border-radius: 0.3em;
+    box-shadow: 0 0 5px -1px black;
+    width: 100%;
+    max-width: 200px;
+    /* Adjust size as needed */
+}
+
+#comment-section {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    width: 30vw;
+}
+
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+}
+
+.comment p:last-of-type {
+    color: white;
+    background-color: rgb(178, 178, 178);
+    background-color: var(--second);
+    padding: 5px;
+    border-radius: 0.3em;
+}
+
+.textarea--comment {
+    resize: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 7px -3px;
+    border-radius: 0.3em;
+    transition: all 0.1s;
+}
+
+.textarea--comment:hover {
+    box-shadow: 0 0 10px -3px;
+}
+
+.textarea--comment:focus {
+    outline: 1px solid gray;
+}
+
+@media screen and (max-width: 990px) {
+
+    #film-details {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        margin: 1rem auto;
+        max-width: 70vw;
+
+    }
+
+    #film-details img {
+        min-width: 80px;
+    }
+
+    #comment-section {
+        width: 50vw;
+    }
+}
+
+.button-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.button-wrapper button:hover {
+    background-color: var(--action);
+}

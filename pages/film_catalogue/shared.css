@@ -1,0 +1,433 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main);
+    background-image: url("");
+}
+
+nav {
+    background-color: var(--third);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.nav--catalogue {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 10px 20px; */
+}
+
+.button__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.button__sort {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: var(--second);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.1s;
+    border: 2px solid transparent;
+    font-weight: bolder;
+}
+
+.button__sort:hover {
+    background-color: transparent;
+    border: 2px solid var(--second);
+    color: var(--second);
+    font-weight: bolder;
+}
+
+.film-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 15px;
+}
+
+.film-card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--second);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.film-poster {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.film-poster::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    /* Initial transparent */
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.film-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    z-index: 0;
+}
+
+.film-card:hover .film-poster::after {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fade to black on hover */
+}
+
+.film-title-rating,
+.button__more-info,
+.button__watched,
+.button__like {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.film-title-rating,
+.button__more-info,
+.button__watched {
+    text-align: center;
+    color: white;
+    transform: translateY(10px);
+}
+
+.film-card:hover .film-title-rating,
+.film-card:hover .button__more-info,
+.film-card:hover .button__watched,
+.film-card:hover .button__like {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.film-title-rating {
+    top: 30%;
+    transform: translate(-50%, -50%) translateY(10px);
+    text-align: center;
+}
+
+.film-title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.film-rating {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.button__action-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    bottom: 20px;
+    position: absolute;
+    z-index: 3;
+    box-sizing: border-box;
+    gap: 10px;
+    /* Ensure there's a gap between the buttons */
+}
+
+#button--logout {
+    flex: 0.1;
+}
+
+/* Add styles for the delete button */
+.button__delete {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-size: 27px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s;
+    opacity: 0;
+    /* Initially hidden */
+    z-index: 30;
+}
+
+.film-card:hover .button__delete {
+    opacity: 1;
+    /* Visible on hover */
+}
+
+.button__delete:hover {
+    color: red;
+    /* Change color on hover for visibility */
+}
+
+/* Hide delete button for non-user-added films */
+#film-list .button__delete {
+    display: none;
+}
+
+/* Ensure delete button for user-added films is displayed */
+#user-added-films .button__delete {
+    display: block;
+}
+
+/* Update the like button styles if needed */
+.button__like {
+    top: 15px;
+    left: 15px;
+    /* Adjust the position to avoid overlapping with delete button */
+    color: white;
+    font-size: 27px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s;
+    opacity: 0;
+    /* Initially hidden */
+}
+
+.film-card:hover .button__like {
+    opacity: 1;
+    /* Visible on hover */
+}
+
+.button__action-l,
+.button__action-r {
+    text-align: center;
+    position: relative;
+    left: 0;
+    padding: 10px;
+    background-color: transparent;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: 1px solid white;
+    transition: all 0.1s;
+}
+
+.button__action-l:hover,
+.button__action-r:hover {
+    background-color: white;
+    color: black;
+}
+
+.button__action-l {
+    max-width: 130px;
+}
+
+.user {
+    font-size: x-large;
+    text-align: center;
+}
+
+#auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Add Film Button Styles */
+.add-film-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    /* Add some space above and below the button */
+}
+
+
+.modal-content {
+    width: 30%;
+    min-width: 300px;
+    padding: 15px;
+    border-radius: 0.3em;
+    box-shadow: 0 0 7px -2px black;
+    background-color: var(--second);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#modal-add-film-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#modal-add-film-form input {
+    border-radius: 0.3em;
+    border: 0;
+    box-shadow: 0 0 3px;
+    outline: none;
+    transition: all 0.1s;
+    width: 100%;
+}
+
+#modal-add-film-form input:hover {
+    box-shadow: 0 0 7px;
+}
+
+#modal-add-film-form input:focus {
+    outline: 2px solid var(--action-color);
+}
+
+#modal-add-film-form button:last-of-type {
+    margin-top: 10px;
+}
+
+#modal-add-film-form label {
+    align-self: baseline;
+}
+
+.modal-close {
+    background-color: var(--main);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    border-radius: inherit;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.1s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    background-color: transparent;
+    outline: 2px solid red;
+    color: red;
+    font-weight: bolder;
+}
+
+#add-film-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+
+
+#button--add-film--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#button-add-film {
+    width: 20%;
+    margin: 20px;
+}
+
+.user-films-heading {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+
+#menu-toggle {
+    display: none;
+}
+
+
+/* Responsive Navigation Menu */
+@media (max-width: 890px) {
+    .nav--catalogue {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .nav--catalogue h1 {
+        margin-bottom: 10px;
+        align-self: center;
+        text-align: center;
+    }
+
+    #user-name {
+        display: none;
+    }
+
+    .button__wrapper {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    .nav--catalogue.active .button__wrapper {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+        color: var(--third);
+        background-color: var(--action-color);
+        padding: 10px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        width: 10%;
+        text-align: center;
+        transition: all 0.1s;
+        border-radius: 0.3em;
+    }
+
+    #menu-toggle:hover {
+        background-color: transparent;
+        color: var(--action-color);
+        border: 2px solid var(--action-color);
+    }
+
+    #button-add-film {
+        width: 80%;
+    }
+}

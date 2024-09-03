@@ -1,0 +1,86 @@
+:root {
+    --main: #4E4C67;
+    --first: #CDA6AD;
+    --second: #72AABB;
+    --third: #000000;
+    --fourth: #3F3D56;
+    --action-color: #CDFD34;
+}
+
+.body {
+    font-family: 'Inter', sans-serif;
+}
+
+.white {
+    color: white;
+}
+
+.action-color {
+    color: var(--action-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.back__button {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3em;
+    border: 2px solid var(--action-color);
+    color: var(--action-color);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: larger;
+    padding: 7px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    transition: all 0.2s;
+    padding-top: 11px;
+
+}
+
+.back__button:hover {
+    border: 2px solid white;
+    border-radius: 100%;
+    color: white;
+}
+
+.button__action {
+    cursor: pointer;
+    border-radius: 0.3em;
+    background-color: var(--action-color);
+    color: var(--third);
+    font-weight: bold;
+    padding: 5px 15px;
+    border: 2px solid transparent;
+    transition: all 0.1s;
+    text-decoration: none;
+}
+
+.button__action:hover {
+    background-color: transparent;
+    color: var(--action-color);
+    border: 2px solid var(--action-color);
+}
+
+.error-message {
+    font-weight: bolder;
+    color: red;
+}
+
+@media screen and (max-width: 890px) {
+    .back__button {
+        left: 2%;
+    }
+}

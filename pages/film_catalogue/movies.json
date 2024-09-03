@@ -1,0 +1,98 @@
+[
+    {
+        "title": "The Shawshank Redemption",
+        "year": 1994,
+        "genre": "Drama",
+        "rating": "9.3/10",
+        "director": "Frank Darabont",
+        "poster": "N/A"
+    },
+    {
+        "title": "The Godfather",
+        "year": 1972,
+        "genre": "Crime, Drama",
+        "rating": "9.2/10",
+        "director": "Francis Ford Coppola",
+        "poster": "N/A"
+    },
+    {
+        "title": "The Dark Knight",
+        "year": 2008,
+        "genre": "Action, Crime, Drama",
+        "rating": "9.0/10",
+        "director": "Christopher Nolan",
+        "poster": "N/A"
+    },
+    {
+        "title": "12 Angry Men",
+        "year": 1957,
+        "genre": "Drama",
+        "rating": "9.0/10",
+        "director": "Sidney Lumet",
+        "poster": "N/A"
+    },
+    {
+        "title": "Schindler's List",
+        "year": 1993,
+        "genre": "Biography, Drama, History",
+        "rating": "8.9/10",
+        "director": "Steven Spielberg",
+        "poster": "N/A"
+    },
+    {
+        "title": "Pulp Fiction",
+        "year": 1994,
+        "genre": "Crime, Drama",
+        "rating": "8.9/10",
+        "director": "Quentin Tarantino",
+        "poster": "N/A"
+    },
+    {
+        "title": "The Good, the Bad and the Ugly",
+        "year": 1966,
+        "genre": "Western",
+        "rating": "8.8/10",
+        "director": "Sergio Leone",
+        "poster": "N/A"
+    },
+    {
+        "title": "Fight Club",
+        "year": 1999,
+        "genre": "Drama",
+        "rating": "8.8/10",
+        "director": "David Fincher",
+        "poster": "N/A"
+    },
+    {
+        "title": "Forrest Gump",
+        "year": 1994,
+        "genre": "Drama, Romance",
+        "rating": "8.8/10",
+        "director": "Robert Zemeckis",
+        "poster": "N/A"
+    },
+    {
+        "title": "Inception",
+        "year": 2010,
+        "genre": "Action, Adventure, Sci-Fi",
+        "rating": "8.8/10",
+        "director": "Christopher Nolan",
+        "poster": "N/A"
+    },
+    {
+        "title": "The Matrix",
+        "year": 1999,
+        "genre": "Action, Sci-Fi",
+        "rating": "8.7/10",
+        "director": "Lana Wachowski, Lilly Wachowski",
+        "poster": "N/A"
+    },
+    {
+        "title": "Gladiator",
+        "year": 2000,
+        "genre": "Action, Adventure, Drama",
+        "rating": "8.5/10",
+        "director": "Ridley Scott",
+        "poster": "N/A"
+    }
+]

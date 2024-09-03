@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.login-register {
+    background-color: var(--third);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 80%;
+}
+
+.login-register__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    gap: 10px;
+}
+
+.login-register__form h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.login-register__inputs {
+    padding: 12px 15px;
+    border-radius: 0.3em;
+    border: none;
+    width: 40%;
+    background-color: var(--main);
+    transition: all 0.1s;
+    color: white;
+    font-size: large;
+}
+
+.login-register__inputs::placeholder {
+    color: white;
+    font-size: 14px;
+}
+
+.login-register__inputs:focus {
+    outline: 2px solid var(--action-color);
+    color: var(--action-color);
+}
+
+.button__submit {
+    cursor: pointer;
+    border-radius: 0.3em;
+    font-size: large;
+    border: none;
+    color: var(--third);
+    background-color: var(--action-color);
+    padding: 7px 15px;
+    border: 2px solid transparent;
+    transition: all 0.1s;
+    margin: 20px 0 20px 0;
+}
+
+.button__submit:hover {
+    background-color: transparent;
+    border: 2px solid var(--action-color);
+    color: var(--action-color);
+}
+
+.redirect-link {
+    text-decoration: none;
+    color: white;
+}
+
+.redirect-link:hover {
+    color: var(--action-color);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 890px) {
+    .login-register__inputs {
+        width: 100%;
+    }
+}
